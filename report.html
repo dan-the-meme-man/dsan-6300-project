@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>March '22 FAA Data Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        iframe {
+            border: none;
+            width: 100%; /* Full width of the screen */
+            height: 70vh; /* 75% of the viewport height */
+            display: block; /* Ensure no extra spacing */
+        }
+        h2 {
+            text-align: center;
+        }
+        h3 {
+            text-align: center;
+        }
+        hr {
+            width: 95%; /* 95% of the page width */
+            margin: 20px auto; /* Center the <hr> with some spacing above and below */
+            border: 1px solid #000; /* You can customize the color */
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Homework 4 (Mini-Project)</h1>
+    <h2>Assigned Month: March '22</h2>
+    <h3>Dan DeGenaro</h3>
+    <div class="iframe-container">
+        <hr>
+        <h2>Longest Delay by Airline (March '22)</h2>
+        <iframe src="figs/task1.html" title="Longest Delay by Airline (March '22)"></iframe>
+    </div>
+    <div class="iframe-container">
+        <hr>
+        <h2>Most Ahead-of-Schedule Take-off by Airline (March '22)</h2>
+        <iframe src="figs/task2.html" title="Most Ahead-of-Schedule Take-off by Airline (March '22)"></iframe>
+    </div>
+    <div class="iframe-container">
+        <hr>
+        <h2>Number of Flights by Day of Week (March '22)</h2>
+        <iframe src="figs/task3.html" title="Number of Flights by Day of Week (March '22)"></iframe>
+    </div>
+    <div class="iframe-container">
+        <hr>
+        <h2>Airport with the Longest Average Delay (Treating Early Departures as On-Time, March '22)</h2>
+        <p>Name: Valdosta, GA: Valdosta Regional</p>
+        <p>Code: VLD</p>
+        <p>Average Delay (minutes): ~67.8</p>
+    </div>
+    <div class="iframe-container">
+        <hr>
+        <h2>Airport with Longest Average Delay by Airline (March '22)<br><sup>Hover to see airport</sup></h2>
+        <iframe src="figs/task5.html" title="Airport with Longest Average Delay by Airline (March '22)<br><sup>Hover to see airport</sup>"></iframe>
+    </div>
+    <!-- Visual Separation-->
+    
+    <div class="iframe-container">
+        <hr>
+        <h2>Cancellations by Airport and Reason</h2>
+        <iframe src="figs/task6b.html" title="Cancellations by Airport and Reason"></iframe>
+    </div>
+    <h2>3-Day Moving Average of Number of Flights (March '22)</h2>
+    <div class="iframe-container">
+        <hr>
+        <iframe src="figs/task7.html" title="3-Day Moving Average of Number of Flights (March '22)"></iframe>
+    </div>
+</body>
+</html>

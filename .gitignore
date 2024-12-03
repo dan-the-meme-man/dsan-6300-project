@@ -1,0 +1,9 @@
+*.pdf
+*.csv
+readme.html
+*.ipynb
+*.sql
+*.docx
+*.py
+dimtables/
+submission/
