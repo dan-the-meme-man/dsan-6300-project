@@ -27,8 +27,9 @@
             margin: 20px auto; /* Center the <hr> with some spacing above and below */
             border: 1px solid #000; /* You can customize the color */
         }
-        p {
-            text-align: center;
+        p { /* left and right padding only */
+            text-align: left;
+            padding: 0 70px;
         }
     </style>
 </head>
@@ -36,44 +37,139 @@
     <h1 style="text-align: center;">Homework 4 (Mini-Project)</h1>
     <h2>Assigned Month: March '22</h2>
     <h3>Dan DeGenaro</h3>
+    <p style="text-align: center;">
+        All visualizations in this report are interactive, and you can hover over elements to see more information.
+    </p>
     <div class="iframe-container">
         <hr>
         <h2>Longest Delay by Airline (March '22)</h2>
+        <p>
+            This bar chart displays the longest delay experienced in March 2022 by across all flights operated by a given airline.
+            For instance, the longest delay experienced by a Delta flight in March 2022 was 1,248 minutes.
+
+        </p>
+        <p>
+            American had the longest delay of any airline in March 2022, with a delay of 2,966 minutes.
+            At the other extreme, Horizon's longest delay was only 430 minutes.
+        </p>
         <iframe src="figs/task1.html" title="Longest Delay by Airline (March '22)"></iframe>
     </div>
     <div class="iframe-container">
         <hr>
         <h2>Most Ahead-of-Schedule Take-off by Airline (March '22)</h2>
+        <p>
+            This bar chart displays the most ahead-of-schedule take-off by airline in March 2022.
+            For instance, the most ahead-of-schedule take-off by a JetBlue flight in March 2022 was a 56-minute early departure.
+        </p>
+        <p>
+            Alaska had the most ahead-of-schedule take-off of any airline in March 2022, with a 63-minute early departure.
+            At the other extreme, Endeavor's most ahead-of-schedule take-off was only a 20-minute early departure.
+        </p>
         <iframe src="figs/task2.html" title="Most Ahead-of-Schedule Take-off by Airline (March '22)"></iframe>
     </div>
     <div class="iframe-container">
         <hr>
         <h2>Number of Flights by Day of Week (March '22)</h2>
+        <p>
+            This bar chart displays the number of flights by day of the week in March 2022.
+            For instance, there were 75,804 flights occurring on Mondays in March 2022.
+        </p>
+        <p>
+            Thursdays had the most flights in March 2022, with 95,655 flights.
+            At the other extreme, Saturdays had the fewest flights, with 67,245 flights.
+        </p>
+        <p>
+            It should be noted that March 2022 had 5 each of Tuesdays, Wednesdays, and Thursdays, which may
+            explain to some extent why those three days occupy the top three spots in terms of number of flights.
+        </p>
         <iframe src="figs/task3.html" title="Number of Flights by Day of Week (March '22)"></iframe>
     </div>
     <div class="iframe-container">
         <hr>
         <h2>Airport with the Longest Average Delay (Treating Early Departures as On-Time, March '22)</h2>
-        <p>Name: Valdosta, GA: Valdosta Regional</p>
-        <p>Code: VLD</p>
-        <p>Average Delay (minutes): ~67.8</p>
+        <p style="text-align: center;">Name: Valdosta, GA: Valdosta Regional</p>
+        <p style="text-align: center;">Code: VLD</p>
+        <p style="text-align: center;">Average Delay (minutes): ~67.8</p>
+        <p>
+            Valdosta, GA's regional airport had the longest average delay of any airport in March 2022, across
+            all departing flights. The average delay for a flight leaving from VLD was approximately 67.8 minutes.
+        </p>
+        <p>
+            It should be noted that airports were not "given credit" for early departures, which were treated as having a delay
+            of 0 minutes, rather than a "negative delay." That is, early and on-time departures were treated identically.
+        </p>
     </div>
     <div class="iframe-container">
         <hr>
         <h2>Airport with Longest Average Delay by Airline (March '22)<br><sup>Hover to see airport</sup></h2>
+        <p>
+            This bar chart displays the airport having the longest average delay for each airline in March 2022,
+            considering all flights departing flights from that airport operated by that airline.
+        </p>
+        <p>
+            For instance, considering only flights operated by Spirit, the airport with the longest average delay was
+            the Akron-Canton area's regional airport (CAK). The average delay for a Spirit flight departing from CAK was
+            about 45 minutes in March 2022, and no airport had a longer average delay for Spirit flights in March 2022.
+        </p>
+        <p>
+            Once again, airports were not "given credit" for early departures, which were treated as having a delay
+            of 0 minutes, rather than a "negative delay." That is, early and on-time departures were treated identically.
+        </p>
+        <p>
+            JetBlue had the longest average delay at a single airport of any airline in March 2022, with an average delay of
+            about 200 minutes at the Hayden, CO airport. At the other extreme, Southwest's longest average delay at a single
+            airport was only about 26 minutes, at Orlando International.
+        </p>
+        <p>
+            To avoid making the visualization too dense, the airport name is displayed when hovering over the bar for the
+            airline in question.
+        </p>
         <iframe src="figs/task5.html" title="Airport with Longest Average Delay by Airline (March '22)<br><sup>Hover to see airport</sup>"></iframe>
     </div>
-    <!-- Visual Separation-->
-    
     <div class="iframe-container">
         <hr>
-        <h2>Cancellations by Airport and Reason</h2>
-        <iframe src="figs/task6b.html" title="Cancellations by Airport and Reason"></iframe>
+        <h2>Cancellations by Airport and Most Frequent Reason (Including Ties)</h2>
+        <p>
+            This bar chart displays the most frequent reason for cancellations at each airport in March 2022. The color and
+            corresponding legend indicate the most frequent reason for cancellations at each airport, while the height indicates
+            the number of cancellations at that airport for that reason.
+        </p>
+        <p>
+            For instance, at LaGuardia, the most frequent reason for cancellation in March 2022 was "Weather", with 364
+            cancellations. At Tampa International, the most frequent reason was "National Air System" (indicating for instance
+            heavy traffic, tests or launches by NASA at the Kennedy Space Center, or some other issue affecting airspace around
+            Tampa), with 57 cancellations.
+        </p>
+        <p>
+            Some bars are split cleanly in half, indicating that two reasons were tied for most frequent reason for
+            cancellations at that airport.
+        </p>
+        <p>
+            This chart has a long tail, and it may be necessary to scroll right to see all airports on your device.
+        </p>
+        <iframe src="figs/task6b.html" title="Cancellations by Airport and Most Frequent Reason (Including Ties)"></iframe>
     </div>
-    <h2>3-Day Moving Average of Number of Flights (March '22)</h2>
+    <h2>4-Day Moving Average of Number of Flights (March '22)</h2>
     <div class="iframe-container">
         <hr>
-        <iframe src="figs/task7.html" title="3-Day Moving Average of Number of Flights (March '22)"></iframe>
+        <p>
+            This line chart displays the 4-day moving average of the number of flights in March 2022. The moving average
+            is calculated by taking the average of the number of flights on a given day and the three days preceding it.
+        </p>
+        <p>
+            The x-axis represents the day of the month (i.e. Day 20 = March 20, 2022), while the y-axis represents the
+            4-day moving average of the number of flights. For instance, the 4-day moving average of the number of flights
+            on March 20, 2022 was about 18,701 flights, indicating that the average number of flights per day over the period
+            March 17-20, 2022 was about 18,701.
+        </p>
+        <p>
+            There is a weak cyclic trend in the data, with a spike roughly once a week (ignoring the spike around day 4).
+            The spikes occur around Sundays and Mondays (6-7, 13-14, 20-21, and 27-28), which may be due to increased daily flights
+            on weekends. Though this conflicts with the earlier observation that Tuesdays-Thursdays had the most flights in March
+            2022, it is still possible because again, there were more of those days in March 2022 than there were Mondays, Fridays,
+            Saturdays, or Sundays.
+        </p>
+        <iframe src="figs/task7.html" title="4-Day Moving Average of Number of Flights (March '22)"></iframe>
     </div>
 </body>
 </html>
